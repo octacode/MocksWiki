@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_saved_pages"
+            android:icon="@drawable/menu_save"
+            android:title="Saved Pages" />
+    </group>
+
+    <item android:title="Contributions">
+        <menu>
+            <item
+                android:id="@+id/nav_edited_pages"
+                android:icon="@drawable/menu_edit"
+                android:title="Edited Pages" />
+            <item
+                android:id="@+id/nav_drafts"
+                android:icon="@drawable/menu_drafts"
+                android:title="Drafts" />
+        </menu>
+    </item>
+
+    <item android:title="Tools">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/menu_settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_how_to"
+                android:icon="@drawable/menu_how_to"
+                android:title="How To" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/menu_info"
+                android:title="About BuildmLearn" />
+        </menu>
+    </item>
+</menu>
