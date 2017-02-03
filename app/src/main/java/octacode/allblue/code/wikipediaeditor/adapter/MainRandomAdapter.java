@@ -41,22 +41,22 @@ public class MainRandomAdapter extends RecyclerView.Adapter<MainRandomAdapter.Ra
 
     @Override
     public RandomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if(viewType==0){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_random_list_item_first,parent,false);
-            mPager = (AutoScrollViewPager) view.findViewById(R.id.pager);
-            msearchText = (EditText) view.findViewById(R.id.search_text);
-            msearchButton = (ImageView) view.findViewById(R.id.search_image);
-            return new RandomViewHolder(view);
-        }
-        else{
+        //if(viewType==0){
+        //    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_random_list_item_first,parent,false);
+        //    mPager = (AutoScrollViewPager) view.findViewById(R.id.pager);
+        //    msearchText = (EditText) view.findViewById(R.id.search_text);
+        //    msearchButton = (ImageView) view.findViewById(R.id.search_image);
+        //    return new RandomViewHolder(view);
+        //}
+        //else{
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_random_list_item,parent,false);
             return new RandomViewHolder(view);
-        }
+        //}
     }
 
     @Override
     public void onBindViewHolder(RandomViewHolder holder, int position) {
-
+/*
         if(position==0){
             Collections.addAll(ImagesArray, IMAGES);
             mPager.setAdapter(new SlidingImageAdapter(mContext,ImagesArray));
@@ -95,7 +95,7 @@ public class MainRandomAdapter extends RecyclerView.Adapter<MainRandomAdapter.Ra
         }
         else{
 
-        }
+        }*/
     }
 
     @Override
@@ -105,9 +105,12 @@ public class MainRandomAdapter extends RecyclerView.Adapter<MainRandomAdapter.Ra
 
     @Override
     public int getItemViewType(int position) {
+        /*
         if(position==0)
             return 0;
         else
             return 1;
+        */
+        return super.getItemViewType(position);
     }
 }
