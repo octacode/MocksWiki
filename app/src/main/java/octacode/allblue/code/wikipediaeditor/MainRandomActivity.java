@@ -2,12 +2,10 @@ package octacode.allblue.code.wikipediaeditor;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -24,12 +22,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import octacode.allblue.code.wikipediaeditor.adapter.MainRandomAdapter;
-import octacode.allblue.code.wikipediaeditor.adapter.SearchActivity;
 import octacode.allblue.code.wikipediaeditor.adapter.SlidingImageAdapter;
 
 public class MainRandomActivity extends AppCompatActivity
