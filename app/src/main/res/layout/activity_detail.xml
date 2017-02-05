@@ -72,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_margin="@dimen/text_margin"
                 android:text="15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words"
+                android:id="@+id/qwe"
                 android:layout_height="match_parent" />
         </android.support.v7.widget.CardView>
 

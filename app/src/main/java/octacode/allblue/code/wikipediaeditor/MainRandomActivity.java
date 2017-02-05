@@ -30,81 +30,15 @@ import octacode.allblue.code.wikipediaeditor.adapter.SlidingImageAdapter;
 public class MainRandomActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private final Integer[] IMAGES= {R.drawable.apple,R.drawable.police,R.drawable.apple,R.drawable.police};
-    private ArrayList<Integer> ImagesArray = new ArrayList<>();
-    private final String LOG_TAG = getClass().getSimpleName();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_random);
 
-        //Code for the ViewPager
-        AutoScrollViewPager mPager;
-        final EditText msearchText;
-        ImageView msearchButton;
+        getSupportFragmentManager().beginTransaction().add(R.id.home_container,new HomeFragment()).commit();
 
-        mPager = (AutoScrollViewPager)findViewById(R.id.pager);
-        msearchText = (EditText)findViewById(R.id.search_text);
-        msearchButton = (ImageView)findViewById(R.id.search_image);
-
-        Collections.addAll(ImagesArray, IMAGES);
-        mPager.setAdapter(new SlidingImageAdapter(this,ImagesArray));
-        mPager.setInterval(5000);
-        mPager.startAutoScroll();
-        msearchText.setHint("Apple");
-        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                //Log.d(LOG_TAG,String.valueOf(position));
-                if(position%2==0)
-                    msearchText.setHint("Apple");
-                else
-                    msearchText.setHint("Police");
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        msearchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String searchQuery = msearchText.getText().toString().trim();
-                if(searchQuery.equals(""))
-                    startActivity(new Intent(MainRandomActivity.this,SearchActivity.class).putExtra("SEARCH_QUERY",msearchText.getHint().toString()));
-                else
-                    startActivity(new Intent(MainRandomActivity.this,SearchActivity.class).putExtra("SEARCH_QUERY",msearchText.getText().toString()));
-            }
-        });
-
-
-        //Code for the ViewPager ends here.
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.main_random_rv);
-
-        MainRandomAdapter mainRandomAdapter = new MainRandomAdapter(this);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(mainRandomAdapter);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
