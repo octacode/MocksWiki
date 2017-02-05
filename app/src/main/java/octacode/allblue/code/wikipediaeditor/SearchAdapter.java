@@ -18,7 +18,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     public class SearchViewHolder extends RecyclerView.ViewHolder{
         public SearchViewHolder(View itemView) {
             super(itemView);
-            frame = (CardView)itemView.findViewById(R.id.frame);
+            frame = (CardView)itemView.findViewById(R.id.card_search);
         }
     }
 
@@ -54,7 +54,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         frame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext,));
+                mContext.startActivity(new Intent(mContext,DetailActivity.class));
             }
         });
     }
