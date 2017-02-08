@@ -1,14 +1,12 @@
-package octacode.allblue.code.wikipediaeditor.adapter;
+package octacode.allblue.code.wikipediaeditor.adapters;
 
 import android.content.Context;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 

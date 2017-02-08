@@ -1,4 +1,4 @@
-package octacode.allblue.code.wikipediaeditor;
+package octacode.allblue.code.wikipediaeditor.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +16,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
-import octacode.allblue.code.wikipediaeditor.adapter.MainRandomAdapter;
-import octacode.allblue.code.wikipediaeditor.adapter.SlidingImageAdapter;
+import octacode.allblue.code.wikipediaeditor.R;
+import octacode.allblue.code.wikipediaeditor.SearchActivity;
+import octacode.allblue.code.wikipediaeditor.adapters.MainRandomAdapter;
+import octacode.allblue.code.wikipediaeditor.adapters.SlidingImageAdapter;
 
 
 public class HomeFragment extends Fragment {

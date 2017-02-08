@@ -68,12 +68,21 @@
             android:id="@+id/card_summary"
             android:layout_below="@+id/summary_tag"
             android:layout_height="wrap_content">
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_margin="@dimen/text_margin"
-                android:text="15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words"
-                android:id="@+id/qwe"
-                android:layout_height="match_parent" />
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words 15Words"
+                    android:layout_margin="@dimen/text_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/preview"/>
+
+            </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <TextView
@@ -103,7 +112,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:fabSize="normal"
+        android:src="@drawable/menu_search"
+        app:layout_anchorGravity="bottom|end" />
 
 </android.support.design.widget.CoordinatorLayout>

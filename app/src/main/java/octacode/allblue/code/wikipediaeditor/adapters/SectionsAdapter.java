@@ -1,6 +1,7 @@
-package octacode.allblue.code.wikipediaeditor.adapter;
+package octacode.allblue.code.wikipediaeditor.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import octacode.allblue.code.wikipediaeditor.EditorActivity;
 import octacode.allblue.code.wikipediaeditor.R;
 
 /**
@@ -39,7 +41,7 @@ public class SectionsAdapter extends RecyclerView.Adapter<SectionsAdapter.Sectio
         sections_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext,sections_text.getText().toString(),Toast.LENGTH_SHORT).show();
+                mContext.startActivity(new Intent(mContext, EditorActivity.class));
             }
         });
     }

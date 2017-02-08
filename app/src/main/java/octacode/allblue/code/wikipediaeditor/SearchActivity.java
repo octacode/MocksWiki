@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import octacode.allblue.code.wikipediaeditor.adapters.SearchAdapter;
+
 public class SearchActivity extends AppCompatActivity {
 
     @Override

@@ -1,8 +1,6 @@
-package octacode.allblue.code.wikipediaeditor.adapter;
+package octacode.allblue.code.wikipediaeditor.adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import octacode.allblue.code.wikipediaeditor.R;

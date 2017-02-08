@@ -1,4 +1,4 @@
-package octacode.allblue.code.wikipediaeditor;
+package octacode.allblue.code.wikipediaeditor.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import octacode.allblue.code.wikipediaeditor.DetailActivity;
+import octacode.allblue.code.wikipediaeditor.R;
 
 /**
  * Created by shasha on 4/2/17.
