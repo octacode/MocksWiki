@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Editing Options">
+        <CheckBoxPreference
+            android:title="Show WikiText"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:title="Show HTML"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Data Management">
+        <Preference
+            android:title="Clear Cache"
+            android:summary="Clears all the saved data as well."/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Spread some love">
+        <Preference
+            android:title="Tell a friend"/>
+        <Preference
+            android:title="Rate wikiEdit"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Login/SignUp">
+        <Preference android:title="Login/SignUp"/>
+    </PreferenceCategory>
+</PreferenceScreen>

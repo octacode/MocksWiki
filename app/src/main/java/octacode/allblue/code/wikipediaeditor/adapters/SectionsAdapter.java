@@ -7,9 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import octacode.allblue.code.wikipediaeditor.EditorActivity;
+import octacode.allblue.code.wikipediaeditor.activities.EditorActivity;
 import octacode.allblue.code.wikipediaeditor.R;
 
 /**

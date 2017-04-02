@@ -49,6 +49,7 @@
         android:text="Login/SignUp"
         android:textSize="15dp"
         android:gravity="center"
+        android:id="@+id/login_signup"
         android:textColor="#FFF"
         android:layout_below="@id/nav_wiki_edit"
         android:layout_toRightOf="@+id/nav_hello"/>

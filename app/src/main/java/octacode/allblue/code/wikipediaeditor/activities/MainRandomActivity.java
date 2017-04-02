@@ -1,10 +1,10 @@
-package octacode.allblue.code.wikipediaeditor;
+package octacode.allblue.code.wikipediaeditor.activities;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,7 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import octacode.allblue.code.wikipediaeditor.R;
 import octacode.allblue.code.wikipediaeditor.fragments.AboutFragment;
 import octacode.allblue.code.wikipediaeditor.fragments.DraftsFragment;
 import octacode.allblue.code.wikipediaeditor.fragments.EditedPagesFragment;
@@ -28,11 +30,14 @@ public class MainRandomActivity extends AppCompatActivity
     FrameLayout fragment_container;
     TextView toolbar_title;
     FloatingActionButton fab;
+    private int double_press_counter=0;
+    TextView login_signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_random);
+        double_press_counter=0;
 
         toolbar_title = (TextView)findViewById(R.id.toolbar_title);
         fragment_container = (FrameLayout)findViewById(R.id.fragment_container);
@@ -48,17 +53,47 @@ public class MainRandomActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v,"Editing Enabled",Snackbar.LENGTH_SHORT).show();
+                fab.setImageResource(R.drawable.search);
+                fab.setSize(FloatingActionButton.SIZE_MINI);
+                if(fab.getSize()==FloatingActionButton.SIZE_MINI) {
+                    fab.setImageResource(R.drawable.edit);
+                    fab.setSize(FloatingActionButton.SIZE_NORMAL);
+                }
+            }
+        });
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        login_signup = (TextView)headerView.findViewById(R.id.login_signup);
+        login_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainRandomActivity.this,LogSignAskActivity.class));
+            }
+        });
     }
 
     @Override
     public void onBackPressed() {
+        double_press_counter++;
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+        if(double_press_counter==1)
+            Toast.makeText(this,"Press again to exit.",Toast.LENGTH_SHORT).show();
+        if(getSupportFragmentManager().findFragmentById(R.id.fragment_container).isVisible()) {
+                Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                homeIntent.addCategory(Intent.CATEGORY_HOME);
+                homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
+                double_press_counter = 0;
+        }
+        else{
             super.onBackPressed();
         }
     }

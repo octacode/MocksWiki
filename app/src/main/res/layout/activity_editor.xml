@@ -1,140 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_editor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#efefef"
-    tools:context="octacode.allblue.code.wikipediaeditor.EditorActivity">
+    android:layout_height="match_parent">
 
-    <HorizontalScrollView
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:id="@+id/editor_toolbar"
-        android:scrollbars="none"
-        android:background="#efefef"
-        android:layout_height="50dp">
-        <RelativeLayout
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/bold1"
-                android:layout_margin="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_home"/>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/bold2"
-                android:layout_toRightOf="@id/bold1"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_home"/>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/bold3"
-                android:layout_toRightOf="@id/bold2"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_home"/>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/bold4"
-                android:layout_toRightOf="@id/bold3"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_home"/>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:id="@+id/bold5"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@id/bold4"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_home"/>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:id="@+id/bold6"
-                android:layout_margin="5dp"
-                android:layout_toRightOf="@id/bold5"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_home"/>
-            </android.support.v7.widget.CardView>
-        </RelativeLayout>
-    </HorizontalScrollView>
-
-    <ScrollView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:id="@+id/editor_box_container"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:scrollbars="none"
-        android:layout_below="@+id/editor_toolbar"
-        android:layout_marginBottom="5dp"
-        android:layout_height="wrap_content">
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words"
-                android:background="@android:color/white"
-                android:layout_margin="@dimen/text_margin"
-                android:id="@+id/editor_box"/>
-        </android.support.v7.widget.CardView>
-    </ScrollView>
-
-    <ScrollView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:id="@+id/textview_box_container"
-        android:scrollbars="none"
-        android:background="#efefef"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editor_box_container">
-        <android.support.v7.widget.CardView
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:text="20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words 20 Words"
-                android:layout_margin="@dimen/text_margin"
-                android:id="@+id/textview_box"/>
-        </android.support.v7.widget.CardView>
-    </ScrollView>
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-</RelativeLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="#FFF"
+            app:tabIndicatorHeight="3dp"
+            app:tabGravity="fill"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+</android.support.design.widget.CoordinatorLayout>

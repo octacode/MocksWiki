@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import octacode.allblue.code.wikipediaeditor.DetailActivity;
+import octacode.allblue.code.wikipediaeditor.activities.DetailActivity;
 import octacode.allblue.code.wikipediaeditor.R;
 
 /**

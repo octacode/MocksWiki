@@ -1,4 +1,4 @@
-package octacode.allblue.code.wikipediaeditor;
+package octacode.allblue.code.wikipediaeditor.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import octacode.allblue.code.wikipediaeditor.R;
 import octacode.allblue.code.wikipediaeditor.adapters.SearchAdapter;
 
 public class SearchActivity extends AppCompatActivity {

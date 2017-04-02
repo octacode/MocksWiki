@@ -11,18 +11,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainRandomActivity"
+            android:name=".activities.MainRandomActivity"
             android:label="@string/title_activity_main_random"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".activities.SearchActivity" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".activities.DetailActivity"
             android:label="@string/title_activity_detail"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".IntroActivity"
+            android:name=".activities.IntroActivity"
             android:label="Intro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="stateHidden"
+        android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.LogSignAskActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activities.EditorActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activities.ContentDetailActivity" />
+        <activity
+            android:name=".activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,10 +50,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".LogSignAskActivity" />
-        <activity android:name=".EditorActivity"></activity>
     </application>
 
 </manifest>
