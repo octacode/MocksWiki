@@ -4,23 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_marginTop="10dp"
+    android:layout_margin="5dp"
     android:layout_width="match_parent"
     android:layout_height="120dp">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
         app:cardCornerRadius="5dp"
         android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="#000"
         android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:scaleType="centerCrop"
+            android:alpha="0.9"
             android:layout_height="match_parent"
             android:src="@drawable/police"/>
 
@@ -29,18 +30,18 @@
             android:alpha="0.69"
             android:layout_alignParentBottom="true"
             android:background="@color/BayBlue"
-            android:layout_height="33dp">
+            android:layout_height="33dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_height="33dp"
+                android:gravity="center"
                 android:textColor="#FFF"
+                android:layout_alignParentBottom="true"
                 android:textStyle="bold"
                 android:text="How to buy stocks?"
                 android:textSize="20sp"/>
-        </FrameLayout>
     </RelativeLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>

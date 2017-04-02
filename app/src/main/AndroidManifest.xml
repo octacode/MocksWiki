@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="octacode.allblue.code.wikipediaeditor">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,24 +11,44 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainRandomActivity"
+            android:name=".activities.MainRandomActivity"
             android:label="@string/title_activity_main_random"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.SearchActivity" />
+        <activity
+            android:name=".activities.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.IntroActivity"
+            android:label="Intro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="stateHidden"
+        android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.LogSignAskActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activities.EditorActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activities.ContentDetailActivity" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".adapter.SearchActivity"
-            android:label="@string/title_activity_search"
-            android:parentActivityName=".MainRandomActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="octacode.allblue.code.wikipediaeditor.MainRandomActivity" />
         </activity>
     </application>
 

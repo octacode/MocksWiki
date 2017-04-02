@@ -1,4 +1,4 @@
-package octacode.allblue.code.wikipediaeditor.adapter;
+package octacode.allblue.code.wikipediaeditor.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import java.util.Collections;
 
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
 import octacode.allblue.code.wikipediaeditor.R;
+import octacode.allblue.code.wikipediaeditor.activities.SearchActivity;
 
 /**
  * Created by shasha on 1/2/17.
@@ -24,7 +25,7 @@ public class MainRandomAdapter extends RecyclerView.Adapter<MainRandomAdapter.Ra
 
     private AutoScrollViewPager mPager;
     private Context mContext;
-    private final Integer[] IMAGES= {R.drawable.apple,R.drawable.police,R.drawable.apple,R.drawable.police};
+    private final Integer[] IMAGES= {R.drawable.apple,R.drawable.police,R.drawable.wiki,R.drawable.wiki_logo};
     private ArrayList<Integer> ImagesArray = new ArrayList<>();
     private final String LOG_TAG = getClass().getSimpleName();
     private EditText msearchText;
